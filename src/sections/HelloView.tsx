@@ -247,6 +247,10 @@ const HelloView: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-[#4D5BCE] flex items-center gap-2.5 tracking-wide">
             <span className="text-[#43D9AD]">&gt;</span> Fullstack Developer
           </h2>
+          <div className="text-sm sm:text-base text-[#607B96] font-mono leading-relaxed space-y-1.5 pt-3">
+            <p>// a highly passionate engineer driven by solving complex problems</p>
+            <p>// dedicated to clean, reusable code, local-first apps & backend API design</p>
+          </div>
         </div>
 
         {/* Big spacing as seen on Figma */}
