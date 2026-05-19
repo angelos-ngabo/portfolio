@@ -26,7 +26,7 @@ const ProjectsView: React.FC = () => {
       image: spendlyThumbnail,
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts'],
       github: 'https://github.com/angelos-ngabo/Spendly',
-      demo: 'https://spendly-two-ochre.vercel.app/',
+      demo: 'https://spend-ly.vercel.app',
       category: 'react',
     },
     {
