@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Github, Twitter, Linkedin, Folder, Terminal, Cpu, Mail } from 'lucide-react';
+import { Menu, X, Github, Twitter, Linkedin, Folder, Terminal, Cpu, Mail, Code2, Database, Braces, Atom, GitBranch } from 'lucide-react';
 
 interface IdeLayoutProps {
   activeTab: string;
@@ -176,24 +176,24 @@ const IdeLayout: React.FC<IdeLayoutProps> = ({
             <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#4D5BCE]/10 blur-[90px]" />
             <div className="absolute top-[40%] left-[30%] w-[250px] h-[250px] rounded-full bg-[#FEA55F]/5 blur-[70px]" />
 
-            {/* Scattered blurred programming icons & tags */}
-            <div className="absolute top-12 left-16 text-[#607B96]/20 blur-[1px] transform -rotate-12 scale-[3.5] font-mono select-none font-bold">
-              &lt;/&gt;
+            {/* Scattered blurred programming icons */}
+            <div className="absolute top-16 left-16 text-[#607B96]/15 blur-[0.7px] transform -rotate-12 select-none">
+              <Code2 className="w-20 h-20" strokeWidth={1} />
             </div>
-            <div className="absolute top-1/4 right-20 text-[#43D9AD]/15 blur-[1.5px] transform rotate-45 scale-[4] font-mono select-none font-bold">
-              {"{ }"}
+            <div className="absolute top-[28%] right-20 text-[#43D9AD]/12 blur-[1px] transform rotate-45 select-none">
+              <Braces className="w-24 h-24" strokeWidth={1} />
             </div>
-            <div className="absolute bottom-24 left-1/3 text-[#4D5BCE]/15 blur-[1px] transform -rotate-6 scale-[3] font-mono select-none font-bold">
-              jsx
+            <div className="absolute bottom-28 left-1/3 text-[#4D5BCE]/12 blur-[0.8px] transform -rotate-6 select-none animate-[spin_60s_linear_infinite]">
+              <Atom className="w-24 h-24" strokeWidth={1} />
             </div>
-            <div className="absolute top-[60%] left-10 text-[#FEA55F]/15 blur-[2px] transform rotate-12 scale-[3.5] font-mono select-none font-bold">
-              sql
+            <div className="absolute top-[65%] left-12 text-[#FEA55F]/12 blur-[1.5px] transform rotate-12 select-none">
+              <Database className="w-20 h-20" strokeWidth={1} />
             </div>
-            <div className="absolute bottom-12 right-24 text-[#607B96]/20 blur-[1.5px] transform -rotate-45 scale-[4] font-mono select-none font-bold">
-              git
+            <div className="absolute bottom-16 right-24 text-[#607B96]/15 blur-[1px] transform -rotate-45 select-none">
+              <GitBranch className="w-20 h-20" strokeWidth={1} />
             </div>
-            <div className="absolute top-1/3 left-1/2 text-[#43D9AD]/10 blur-[2px] transform -rotate-12 scale-[2.5] font-mono select-none font-bold">
-              npm
+            <div className="absolute top-1/3 left-[40%] text-[#43D9AD]/8 blur-[1.5px] transform -rotate-12 select-none">
+              <Terminal className="w-20 h-20" strokeWidth={1} />
             </div>
           </div>
 
