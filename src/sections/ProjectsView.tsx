@@ -82,7 +82,7 @@ const ProjectsView: React.FC = () => {
   };
 
   return (
-    <div className="grid h-full w-full gap-8 lg:grid-cols-[240px_1fr] overflow-hidden -mx-4 -my-8 sm:-mx-8 sm:-my-12">
+    <div className="grid w-full gap-8 lg:grid-cols-[240px_1fr] lg:h-full lg:overflow-hidden -mx-4 -my-8 sm:-mx-8 sm:-my-12">
       {/* Left sidebar filters */}
       <div className="border-b border-[#1E2D3D] bg-[#01080E]/40 p-4 lg:border-b-0 lg:border-r lg:border-[#1E2D3D] lg:p-6 select-none shrink-0 font-mono">
         <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#607B96] flex items-center gap-2">

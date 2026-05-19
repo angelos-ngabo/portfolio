@@ -34,7 +34,7 @@ const ContactView: React.FC = () => {
   const currentDateString = new Date().toDateString();
 
   return (
-    <div className="grid h-full w-full gap-12 lg:grid-cols-2 lg:items-center">
+    <div className="grid w-full gap-12 lg:grid-cols-2 lg:items-center lg:h-full py-4 lg:py-0">
       {/* Left Column: Form / Success Message */}
       <div className="flex flex-col justify-center space-y-6 select-text max-w-lg w-full justify-self-center">
         {!isSubmitted ? (

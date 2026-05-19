@@ -236,7 +236,7 @@ const HelloView: React.FC = () => {
   };
 
   return (
-    <div className="grid h-full w-full gap-12 lg:grid-cols-2 lg:items-center">
+    <div className="grid w-full gap-12 lg:grid-cols-2 lg:items-center lg:h-full py-4 lg:py-0">
       {/* Left Pane - Welcome Intro */}
       <div className="flex flex-col justify-center select-text">
         <div className="space-y-5">
@@ -278,7 +278,7 @@ const HelloView: React.FC = () => {
       {/* Right Pane - Retro Snake Game Box */}
       <div className="flex items-center justify-center relative">
         {/* Figma-style colorful background glow blobs behind the console */}
-        <div className="absolute w-[130%] h-[130%] pointer-events-none select-none -z-10 overflow-visible flex items-center justify-center">
+        <div className="hidden lg:flex absolute w-[130%] h-[130%] pointer-events-none select-none -z-10 overflow-visible items-center justify-center">
           <div className="absolute top-[0%] left-[0%] w-[320px] h-[320px] rounded-full bg-[#43D9AD]/20 blur-[85px] opacity-95 animate-pulse" style={{ animationDuration: '6s' }} />
           <div className="absolute bottom-[0%] right-[0%] w-[360px] h-[360px] rounded-full bg-[#4D5BCE]/25 blur-[95px] opacity-95 animate-pulse" style={{ animationDuration: '8s' }} />
         </div>
