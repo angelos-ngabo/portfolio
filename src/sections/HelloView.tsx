@@ -256,7 +256,7 @@ const HelloView: React.FC = () => {
         {/* Big spacing as seen on Figma */}
         <div className="mt-20 lg:mt-28 space-y-6 font-mono text-base leading-relaxed">
           <div className="space-y-3 text-sm sm:text-base tracking-wide">
-            <p className="text-[#607B96]">// complete the game to continue</p>
+            <p className="text-[#607B96]">// play the game if you feel bored</p>
             <p className="text-[#607B96]">// you can also find my profile on Github:</p>
           </div>
           <div className="rounded-lg border border-[#1E2D3D] bg-[#01080E] p-6 text-sm sm:text-base shadow-inner tracking-wide leading-loose">
