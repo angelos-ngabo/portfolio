@@ -168,7 +168,35 @@ const IdeLayout: React.FC<IdeLayoutProps> = ({
         )}
 
         {/* Core Editor View Space */}
-        <main className="relative flex flex-grow flex-col overflow-hidden bg-[#011627]">
+        <main className="relative flex flex-grow flex-col overflow-hidden bg-gradient-to-br from-[#011627] via-[#010A15] to-[#011F35]">
+          {/* Floating Blurred Coding Icons Background Wrapper */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 select-none">
+            {/* Ambient colorful light glows */}
+            <div className="absolute top-[-10%] right-[-10%] w-[350px] h-[350px] rounded-full bg-[#43D9AD]/10 blur-[80px]" />
+            <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#4D5BCE]/10 blur-[90px]" />
+            <div className="absolute top-[40%] left-[30%] w-[250px] h-[250px] rounded-full bg-[#FEA55F]/5 blur-[70px]" />
+
+            {/* Scattered blurred programming icons & tags */}
+            <div className="absolute top-12 left-16 text-[#607B96]/20 blur-[1px] transform -rotate-12 scale-[3.5] font-mono select-none font-bold">
+              &lt;/&gt;
+            </div>
+            <div className="absolute top-1/4 right-20 text-[#43D9AD]/15 blur-[1.5px] transform rotate-45 scale-[4] font-mono select-none font-bold">
+              {"{ }"}
+            </div>
+            <div className="absolute bottom-24 left-1/3 text-[#4D5BCE]/15 blur-[1px] transform -rotate-6 scale-[3] font-mono select-none font-bold">
+              jsx
+            </div>
+            <div className="absolute top-[60%] left-10 text-[#FEA55F]/15 blur-[2px] transform rotate-12 scale-[3.5] font-mono select-none font-bold">
+              sql
+            </div>
+            <div className="absolute bottom-12 right-24 text-[#607B96]/20 blur-[1.5px] transform -rotate-45 scale-[4] font-mono select-none font-bold">
+              git
+            </div>
+            <div className="absolute top-1/3 left-1/2 text-[#43D9AD]/10 blur-[2px] transform -rotate-12 scale-[2.5] font-mono select-none font-bold">
+              npm
+            </div>
+          </div>
+
           {/* Main workspace view content */}
           <div className="flex-grow overflow-y-auto p-4 sm:p-8 lg:p-12">
             {children}
