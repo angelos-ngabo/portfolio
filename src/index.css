@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;450;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Fira Code', 'Outfit', 'Inter', monospace, system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 450;
+
+  color-scheme: dark;
+  color: #E5E9F0;
+  background-color: #01080E;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Editor Theme Color Tokens */
+  --editor-bg: #011627;
+  --editor-border: #1E2D3D;
+  --text-comment: #607B96;
+  --text-keyword: #4D5BCE;
+  --text-string: #FFA1AD;
+  --text-variable: #00D5BE;
+  --text-number: #E99287;
+  --accent-teal: #43D9AD;
+  --accent-orange: #FEA55F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #01080E;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #011627;
+  border-left: 1px solid #1E2D3D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px border-solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Glowing Radial Orbs */
+.glow-orb {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-blue {
+  background: radial-gradient(circle, #38bdf8 0%, transparent 70%);
+}
+
+.glow-violet {
+  background: radial-gradient(circle, #7c3aed 0%, transparent 70%);
+}
+
+.glow-indigo {
+  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+}
