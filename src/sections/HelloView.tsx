@@ -278,12 +278,12 @@ const HelloView: React.FC = () => {
       {/* Right Pane - Retro Snake Game Box */}
       <div className="flex items-center justify-center relative">
         {/* Figma-style colorful background glow blobs behind the console */}
-        <div className="absolute w-[110%] h-[110%] pointer-events-none select-none -z-10 overflow-visible flex items-center justify-center">
-          <div className="absolute top-[5%] left-[5%] w-[240px] h-[240px] rounded-full bg-[#43D9AD]/25 blur-[55px] opacity-90 animate-pulse" style={{ animationDuration: '4s' }} />
-          <div className="absolute bottom-[5%] right-[5%] w-[260px] h-[260px] rounded-full bg-[#4D5BCE]/35 blur-[65px] opacity-90 animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute w-[130%] h-[130%] pointer-events-none select-none -z-10 overflow-visible flex items-center justify-center">
+          <div className="absolute top-[0%] left-[0%] w-[320px] h-[320px] rounded-full bg-[#43D9AD]/20 blur-[85px] opacity-95 animate-pulse" style={{ animationDuration: '6s' }} />
+          <div className="absolute bottom-[0%] right-[0%] w-[360px] h-[360px] rounded-full bg-[#4D5BCE]/25 blur-[95px] opacity-95 animate-pulse" style={{ animationDuration: '8s' }} />
         </div>
 
-        <div className="relative flex flex-col items-center rounded-xl border border-[#1E2D3D] bg-gradient-to-br from-[#175553]/25 via-[#011627]/90 to-[#43D9AD]/5 p-6 shadow-[0_0_40px_rgba(77,91,206,0.25)] backdrop-blur-xl max-w-[440px] w-full">
+        <div className="relative flex flex-col items-center rounded-xl border border-[#1E2D3D] bg-gradient-to-br from-[#175553]/25 via-[#011627]/90 to-[#43D9AD]/5 p-6 shadow-[0_0_60px_rgba(77,91,206,0.35)] backdrop-blur-xl max-w-[440px] w-full">
           {/* Retro Corner brackets & screw details */}
           <div className="absolute top-3 left-3 flex gap-1 opacity-60">
             <span className="h-1.5 w-1.5 rounded-full bg-[#1E2D3D] border border-white/5" />
