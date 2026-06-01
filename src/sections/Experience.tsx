@@ -1,84 +1,47 @@
 import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import Container from '../components/ui/Container';
+import SectionTitle from '../components/ui/SectionTitle';
+import { experience } from '../data/portfolio';
 
-const Experience = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+/** Not in Figma template — compact block between Portfolio and Contact */
+const Experience = () => (
+  <section id="experience" className="about-radial-bg scroll-mt-24 py-14 lg:py-16">
+    <Container variant="figma" className="text-center">
+      <SectionTitle className="mb-10 lg:mb-12">Experience</SectionTitle>
 
-  const experiences = [
-    {
-      year: '2024',
-      title: 'Rangira Agro-Farming System',
-      company: 'Personal Project',
-      description: 'Developed a comprehensive agricultural platform connecting farmers, buyers, and warehouse agents with AI-assisted features.',
-    },
-    {
-      year: '2023',
-      title: 'Complaint Management System',
-      company: 'Academic Project',
-      description: 'Built a Java-based enterprise system using client-server architecture with Hibernate and MySQL.',
-    },
-    {
-      year: '2023',
-      title: 'University Library Management System',
-      company: 'Academic Project',
-      description: 'Created a web-based library system with PHP backend and MySQL database for book management.',
-    },
-    {
-      year: '2021',
-      title: 'Bachelor of Software Engineering',
-      company: 'Adventist University of Central Africa (AUCA)',
-      description: 'Currently pursuing degree with focus on software architecture, full-stack development, and system design.',
-    },
-  ];
-
-  return (
-    <section ref={ref} className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16"
-        >
-          Experience & Journey
-        </motion.h2>
-
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 to-purple-600" />
-
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.year}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`relative flex items-center mb-12 ${
-                index % 2 === 0 ? 'justify-start' : 'justify-end'
-              }`}
+      <div className="figma-prose max-w-3xl space-y-8 lg:space-y-10 text-left">
+        {experience.map((item, index) => (
+          <motion.article
+            key={`${item.role}-${item.period}`}
+            initial={{ opacity: 0, x: -16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.45, delay: index * 0.08 }}
+            className="relative border-l-4 border-black pl-6 sm:pl-8"
+          >
+            <span className="absolute w-3 h-3 bg-black -left-[7px] top-2 rounded-sm" aria-hidden />
+            <h3
+              className="text-lg font-bold uppercase tracking-wider text-black mb-1"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              {/* Timeline Dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900 z-10" />
-
-              {/* Content Card */}
-              <div
-                className={`w-full md:w-5/12 p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 ${
-                  index % 2 === 0 ? 'ml-8' : 'mr-8'
-                }`}
-              >
-                <div className="text-sm text-blue-400 font-semibold mb-2">{exp.year}</div>
-                <h3 className="text-xl font-semibold mb-1">{exp.title}</h3>
-                <div className="text-gray-400 mb-3">{exp.company}</div>
-                <p className="text-gray-300">{exp.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              {item.role}
+            </h3>
+            <p
+              className="text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-3"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              {item.company}
+              <span className="mx-2 text-neutral-300">|</span>
+              {item.period}
+            </p>
+            <p className="text-[15px] leading-[20.8px] text-[#050505]" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+              {item.description}
+            </p>
+          </motion.article>
+        ))}
       </div>
-    </section>
-  );
-};
+    </Container>
+  </section>
+);
 
 export default Experience;

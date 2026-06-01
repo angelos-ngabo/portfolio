@@ -1,13 +1,476 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ngabo Angelos - Software Engineer Portfolio</title>
+    <meta
+      name="description"
+      content="Ngabo Angelos — Fullstack Developer portfolio. React, TypeScript, Spring Boot, .NET."
+    />
+    <title>Ngabo Angelos | Fullstack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/logo-na.svg" />
+    <meta property="og:image" content="/assets/logo-na.svg" />
+
+    <!-- Google Fonts (Figma template) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400&family=Poppins:wght@700&family=Raleway:wght@700;800&family=Roboto:wght@400&family=Varela&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- ========== SECTION 1 — NAVIGATION ========== -->
+    <header class="site-header" id="site-header">
+      <div class="header-inner figma-wrap">
+        <a href="#hero" class="logo nav-logo" aria-label="Home">
+          <img src="/assets/logo-na.svg" alt="NA Logo" width="48" height="48" />
+        </a>
+
+        <button
+          type="button"
+          class="nav-toggle nav-hamburger"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav nav-links" id="main-nav" aria-label="Main">
+          <a href="#about" class="nav-link" data-section="about">About me</a>
+          <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          <a href="#portfolio" class="nav-link" data-section="portfolio">Projects</a>
+          <a href="#contact" class="nav-link nav-cta" data-section="contact">Contact Me</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-top">
+        <a href="#hero" class="nav-logo" aria-label="Home">
+          <img src="/assets/logo-na.svg" alt="NA" width="48" height="48" />
+        </a>
+        <button type="button" class="mobile-menu-close" id="menuClose" aria-label="Close menu">
+          &#x2715;
+        </button>
+      </div>
+
+      <nav class="mobile-menu-links" aria-label="Mobile">
+        <a href="#about" class="mobile-nav-link">About me</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#portfolio" class="mobile-nav-link">Projects</a>
+      </nav>
+
+      <div class="mobile-menu-contact">
+        <a href="#contact" class="mobile-contact-btn">CONTACT ME</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- ========== SECTION 2 — HERO ========== -->
+      <section id="hero" class="hero">
+        <div class="hero-split">
+          <div class="hero-left">
+            <p class="greeting">Hi, I am</p>
+            <h1 class="name">Ngabo Angelos</h1>
+            <p class="title">Fullstack Developer</p>
+            <p class="stack">React · TypeScript · Spring Boot · .NET</p>
+            <div class="social-icons">
+              <a href="mailto:ngaboangelos@example.com" aria-label="Email">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ngabo-angelos-939a6a2a5/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/angelos-ngabo"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero-right">
+            <img id="hero-photo" src="/assets/meya.png" alt="Ngabo Angelos" />
+          </div>
+
+          <div class="hero-bottom-panel">
+            <div class="hero-mobile-text">
+              <span class="greeting">Hi, I am</span>
+              <span class="name">Ngabo Angelos</span>
+              <span class="title">Fullstack Developer</span>
+            </div>
+
+            <div class="hero-mobile-socials">
+              <a href="mailto:ngaboangelos@example.com" aria-label="Email">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+              <a href="https://github.com/angelos-ngabo" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ngabo-angelos-939a6a2a5/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IT BERRIES strip -->
+      <div class="it-berries">
+          <div class="it-berries-inner figma-wrap">
+            <div class="it-berries-copy">
+              <h2 class="it-berries-title">IT BERRIES</h2>
+              <p class="it-berries-text">
+                I build full-stack products that balance clean interfaces with reliable backends. From React and
+                TypeScript on the front end to Spring Boot, ASP.NET Core, and PostgreSQL on the server, I focus on
+                shipping maintainable software that scales with real users.
+              </p>
+              <a href="#about" class="btn-outline btn-outline--light">READ MORE</a>
+            </div>
+            <div class="it-berries-art" aria-hidden="true">
+              <span class="it-watermark">IT</span>
+              <span class="it-ring"></span>
+              <span class="it-dot"></span>
+            </div>
+          </div>
+        </div>
+
+      <!-- ========== SECTION 3 — ABOUT ME (+ skills anchor in same flow) ========== -->
+      <section id="about" class="about section-light section-fade">
+        <div class="figma-wrap about-inner">
+          <h2 class="section-title">About Me</h2>
+
+          <p class="about-intro">"Passionate about building things that work beautifully."</p>
+
+          <div class="about-body">
+            <p>
+              I'm Ngabo Angelos, a Fullstack Developer based in Kigali, Rwanda, with a strong focus on building
+              scalable, high-performance web applications that deliver real value. I specialize in bridging the gap
+              between clean, intuitive front-end experiences and robust, well-architected back-end systems.
+            </p>
+            <p>
+              With hands-on experience in React, TypeScript, Spring Boot, and .NET, I thrive in environments where
+              precision meets creativity. Whether I'm designing a seamless user interface or engineering a reliable API,
+              I bring the same level of care and attention to every layer of the stack.
+            </p>
+            <p>
+              When I'm not coding, I'm studying system design, exploring new technologies, or finding ways to make
+              complex problems feel simple. I believe great software is not just functional - it's thoughtful.
+            </p>
+          </div>
+
+          <a href="#portfolio" class="about-explore">EXPLORE</a>
+
+          <div class="wavy-divider" aria-hidden="true">
+            <svg viewBox="0 0 120 16" width="120" height="16">
+              <path
+                d="M0 8 L8 4 L16 12 L24 4 L32 12 L40 4 L48 12 L56 4 L64 12 L72 4 L80 12 L88 4 L96 12 L104 4 L112 12 L120 8"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+
+          <div class="section-bar"></div>
+
+          <div class="services-grid about-pillars">
+            <article class="service-card">
+              <img src="/figma_images/5fddff86cb7ba5e8b0c74d13c0ce6e370cc6d818.png" alt="" class="service-icon" />
+              <h3 class="pillar-title">DESIGN</h3>
+              <p class="pillar-body">
+                I care deeply about user experience. Every interface I build is crafted with clarity and purpose -
+                clean layouts, intuitive navigation, and pixel-level attention to detail.
+              </p>
+            </article>
+            <article class="service-card">
+              <img src="/figma_images/b824972287e50b57fa533c746b4cfdb0b266ce2b.png" alt="" class="service-icon" />
+              <h3 class="pillar-title">DEVELOPMENT</h3>
+              <p class="pillar-body">
+                From React components to Spring Boot APIs, I write code that is readable, maintainable, and built to
+                scale. Performance and reliability are never an afterthought.
+              </p>
+            </article>
+            <article class="service-card service-card--center">
+              <img src="/figma_images/b0c39be56feda71929896ce7b8627bc339652def.png" alt="" class="service-icon" />
+              <h3 class="pillar-title">MAINTENANCE</h3>
+              <p class="pillar-body">
+                Great software requires ongoing care. I build systems that are easy to monitor, debug, and evolve - so
+                your product stays healthy long after launch.
+              </p>
+            </article>
+          </div>
+
+          <div class="section-bar"></div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 4 — SKILLS ========== -->
+      <section id="skills" class="skills section-light section-fade">
+        <div class="figma-wrap skills-inner">
+          <h2 class="section-title">Skills</h2>
+
+          <div class="skill-block">
+            <h3 class="skill-label">Using Now:</h3>
+            <ul class="skill-icons" data-skill-row>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />
+                <span>React.js</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" />
+                <span>TypeScript</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />
+                <span>JavaScript</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="" />
+                <span>Tailwind</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" />
+                <span>Java</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="" />
+                <span>Spring Boot</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" />
+                <span>Git</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" />
+                <span>PostgreSQL</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />
+                <span>Docker</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="" />
+                <span>Cloud</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="" />
+                <span>Next.js</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-block">
+            <h3 class="skill-label">Learning:</h3>
+            <ul class="skill-icons skill-icons--row4">
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="" />
+                <span>GraphQL</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-shield-halved skill-symbol" aria-hidden="true"></i>
+                <span>Cyber Security</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-user-secret skill-symbol" aria-hidden="true"></i>
+                <span>Ethical Hacking</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-block">
+            <h3 class="skill-label">Other Skills:</h3>
+            <ul class="skill-icons skill-icons--row4">
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" />
+                <span>C# / .NET</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />
+                <span>MySQL</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" />
+                <span>REST APIs</span>
+              </li>
+              <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="" />
+                <span>Hadoop</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="wavy-divider" aria-hidden="true">
+            <svg viewBox="0 0 120 16" width="120" height="16">
+              <path
+                d="M0 8 L8 4 L16 12 L24 4 L32 12 L40 4 L48 12 L56 4 L64 12 L72 4 L80 12 L88 4 L96 12 L104 4 L112 12 L120 8"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 5 — PORTFOLIO ========== -->
+      <section id="portfolio" class="portfolio section-dark section-fade">
+        <div
+          class="portfolio-hero"
+          style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('/figma_images/1.png')"
+        >
+          <h2 class="section-title section-title--light">Projects</h2>
+        </div>
+
+        <div class="portfolio-body figma-wrap">
+          <div class="portfolio-tabs" role="tablist" aria-label="Filter projects">
+            <button type="button" class="tab active" data-filter="ALL" role="tab" aria-selected="true">All</button>
+            <button type="button" class="tab" data-filter="CODED" role="tab" aria-selected="false">Coded</button>
+            <button type="button" class="tab" data-filter="DESIGNED" role="tab" aria-selected="false">Designed</button>
+          </div>
+
+          <div class="portfolio-grid">
+            <!-- Featured — Spendly -->
+            <article
+              class="portfolio-card portfolio-card--featured"
+              data-category="CODED DESIGNED"
+            >
+              <img src="/figma_images/spendly.png" alt="Spendly" />
+              <div class="card-overlay">
+                <h3>Spendly</h3>
+                <p class="card-sub">coded, designed</p>
+                <p class="card-desc">
+                  Personal Finance Management Platform — track spending, budgets, and insights.
+                </p>
+                <div class="card-actions">
+                  <a href="https://spendly-two-ochre.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+                  <a href="https://github.com/angelos-ngabo/Spendly" target="_blank" rel="noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-card" data-category="CODED">
+              <img src="/figma_images/rangira.png" alt="Rangira Agro" />
+              <div class="card-overlay">
+                <h3>Rangira Agro</h3>
+                <p class="card-sub">coded, designed</p>
+                <p class="card-desc">Agricultural management system for farm operations and reporting.</p>
+                <div class="card-actions">
+                  <a href="#">Demo</a>
+                  <a href="https://github.com/angelos-ngabo/Rangira_Agro_Farming_26566" target="_blank" rel="noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 6 — CONTACT ========== -->
+      <section id="contact" class="contact section-light section-fade">
+        <div class="figma-wrap contact-inner">
+          <h2 class="section-title">Contact</h2>
+
+          <p class="prose">
+            Interested in collaborating or have a role in mind? Send a message — I typically respond within 48 hours.
+          </p>
+
+          <div class="wavy-divider" aria-hidden="true">
+            <svg viewBox="0 0 120 16" width="120" height="16">
+              <path
+                d="M0 8 L8 4 L16 12 L24 4 L32 12 L40 4 L48 12 L56 4 L64 12 L72 4 L80 12 L88 4 L96 12 L104 4 L112 12 L120 8"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <label class="field">
+              <span class="sr-only">Name</span>
+              <input type="text" name="name" placeholder="ENTER YOUR NAME*" required autocomplete="name" />
+            </label>
+            <label class="field">
+              <span class="sr-only">Email</span>
+              <input type="email" name="email" placeholder="ENTER YOUR EMAIL*" required autocomplete="email" />
+            </label>
+            <label class="field">
+              <span class="sr-only">Phone</span>
+              <input type="tel" name="phone" placeholder="PHONE NUMBER" autocomplete="tel" />
+            </label>
+            <label class="field field--area">
+              <span class="sr-only">Message</span>
+              <textarea name="message" rows="4" placeholder="YOUR MESSAGE*" required></textarea>
+            </label>
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== SECTION 7 — FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="figma-wrap footer-inner">
+        <a href="#hero" class="back-to-top">
+          <i class="fa-solid fa-chevron-up"></i>
+          <i class="fa-solid fa-chevron-up"></i>
+          <span>Back to Top</span>
+        </a>
+
+        <div class="footer-logo">
+          <img src="/assets/logo-na.svg" alt="NA" width="40" height="40" />
+        </div>
+
+        <div class="footer-social footer-socials">
+          <a href="https://github.com/angelos-ngabo" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ngabo-angelos-939a6a2a5/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:ngaboangelos@example.com" aria-label="Email">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+
+        <p class="copyright">@2021 Ngabo Angelos <span>All Rights Reserved.</span></p>
+      </div>
+    </footer>
+
+    <script src="/js/script.js" defer></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
+/** Static vanilla HTML/CSS/JS — public/ serves figma_images */
 export default defineConfig({
-  plugins: [react()],
-})
+  root: '.',
+  publicDir: 'public',
+});
