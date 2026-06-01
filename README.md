@@ -1,14 +1,15 @@
 # Ngabo Angelos — Portfolio
 
-Pixel-perfect portfolio based on the [Figma Tomasz Gajda template](https://www.figma.com/design/euMKvuVj0GM9avjfEdM3CK/Portfolio---Tomasz-Gajda--Community-), built with **HTML, CSS, and vanilla JavaScript** (no React).
+Portfolio site based on the [Figma Tomasz Gajda template](https://www.figma.com/design/euMKvuVj0GM9avjfEdM3CK/Portfolio---Tomasz-Gajda--Community-), built with **HTML, CSS, and vanilla JavaScript**.
 
 ## Stack
 
-- `index.html` — semantic markup
-- `css/style.css` — layout & Figma-accurate styling
-- `js/script.js` — nav, filters, scroll animations
-- `public/figma_images/` — exported Figma assets
-- CDN: Google Fonts, Font Awesome 6, Devicon (skills icons)
+- `index.html` — page markup
+- `public/css/style.css` — layout and responsive styling
+- `public/js/script.js` — navigation, filters, scroll effects
+- `public/assets/` — logo and hero image
+- `public/figma_images/` — section and project imagery
+- CDN: Google Fonts, Font Awesome 6, Devicon
 
 ## Run locally
 
@@ -28,16 +29,10 @@ npm run preview
 
 Output is in `dist/`.
 
-## Sections
+## Figma tooling (optional)
 
-1. Navigation (fixed)
-2. Hero (diagonal split + IT BERRIES)
-3. About Me (services grid)
-4. Skills (Devicon icons)
-5. Portfolio (filter tabs + project grid)
-6. Contact (L-shaped form fields)
-7. Footer
+Scripts in the repo root (`fetch_figma.mjs`, etc.) require a `FIGMA_TOKEN` environment variable. Do not commit tokens.
 
 ## Note
 
-The previous React/TypeScript source remains in `src/` for reference but is **not** used by the dev server anymore.
+Legacy React source in `src/` is kept for reference and is not used by the live site.
