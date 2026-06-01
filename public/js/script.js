@@ -77,9 +77,15 @@
   });
 
   /* ---------- Header shadow on scroll ---------- */
+  const hero = document.querySelector('.hero');
+  const desktopMq = window.matchMedia('(min-width: 769px)');
+
   const onScroll = () => {
     if (header) {
-      header.classList.toggle('is-scrolled', window.scrollY > 40);
+      const heroHeight = hero ? hero.offsetHeight : window.innerHeight;
+      const scrolled = desktopMq.matches ? window.scrollY > heroHeight - 80 : window.scrollY > 40;
+      header.classList.toggle('is-scrolled', scrolled);
+      header.classList.toggle('scrolled', scrolled);
     }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
