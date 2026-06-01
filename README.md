@@ -7,9 +7,8 @@ Portfolio site based on the [Figma Tomasz Gajda template](https://www.figma.com/
 - `index.html` — page markup
 - `public/css/style.css` — layout and responsive styling
 - `public/js/script.js` — navigation, filters, scroll effects
-- `public/assets/` — logo and hero photo
-- `public/figma_images/` — project imagery (`1.png`, `spendly.png`, `rangira.png`)
-- `public/CV.pdf` — résumé download
+- `public/assets/` — logo and hero image
+- `public/figma_images/` — section and project imagery
 - CDN: Google Fonts, Font Awesome 6, Devicon
 
 ## Run locally
@@ -29,3 +28,11 @@ npm run preview
 ```
 
 Output is in `dist/`.
+
+## Figma tooling (optional)
+
+Scripts in the repo root (`fetch_figma.mjs`, etc.) require a `FIGMA_TOKEN` environment variable. Do not commit tokens.
+
+## Note
+
+Legacy React source in `src/` is kept for reference and is not used by the live site.

@@ -875,46 +875,6 @@ button {
   margin-bottom: 20px;
 }
 
-.about-cv-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin: 32px auto 8px;
-}
-
-.about-cv-btn {
-  font-family: var(--font-ui);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 12px 22px;
-  border: 1.5px solid #111111;
-  color: #111111;
-  background: transparent;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.about-cv-btn--preview:hover,
-.about-cv-btn--download:hover {
-  background: #111111;
-  color: #ffffff;
-  border-color: #111111;
-}
-
-.about-cv-btn--download {
-  background: #111111;
-  color: #ffffff;
-}
-
-.about-cv-btn--download:hover {
-  background: transparent;
-  color: #111111;
-}
-
 .about-explore {
   display: flex;
   align-items: center;
@@ -996,11 +956,7 @@ button {
   width: 64px;
   height: 64px;
   margin: 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #111111;
-  font-size: 1.75rem;
+  object-fit: contain;
 }
 
 .about-inner > .section-bar:last-of-type {
@@ -1964,10 +1920,6 @@ button {
 
   .about-intro {
     text-align: left;
-  }
-
-  .about-cv-actions {
-    justify-content: flex-start;
   }
 
   .about-explore {

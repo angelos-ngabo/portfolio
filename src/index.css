@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito:wght@400;700&family=Open+Sans:wght@300;400&family=Raleway:wght@700;800&family=Roboto:wght@400&family=Varela&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Montserrat', 'Raleway', system-ui, sans-serif;
+  color: #000;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+
+  /* Figma desktop frame (1920×7156) */
+  --hero-h: 1022px;
+  --itberries-h: 308px;
+  --portfolio-h: 1305px;
+  --contact-h: 1178px;
+  --footer-h: 326px;
+
+  --nav-slot: 147px;
+  --nav-gap: 8px;
+  --nav-cta-gap: 33px;
+  --nav-h: 46px;
+
+  /* Centered copy width — Figma paragraphs */
+  --figma-prose-w: 763px;
+  --figma-prose-mobile: 313px;
+  --figma-services-w: 1066px;
+  --figma-skills-w: 1004px;
+
+  /* About frame 1:44 internal Y gaps (px) */
+  --about-pt: 158px;
+  --about-pb: 162px;
+  --about-title-to-text: 88px;
+  --about-text-to-explore: 74px;
+  --about-explore-to-bar: 85px;
+  --about-bar-to-services: 108px;
+  --about-services-to-bar: 80px;
+  --about-bar-to-skills-title: 136px;
+  --about-skills-title-to-grid: 96px;
+
+  /* Contact frame 1:141 */
+  --contact-pt: 158px;
+  --contact-title-to-text: 76px;
+  --contact-text-to-form: 129px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+/* Figma layout helpers */
+.figma-section {
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.figma-prose {
+  width: 100%;
+  max-width: var(--figma-prose-mobile);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 15px;
+  line-height: 20.8px;
+  color: #050505;
+}
+
+@media (min-width: 1024px) {
+  .figma-prose {
+    max-width: var(--figma-prose-w);
+  }
+}
+
+.figma-service-copy {
+  font-size: 14px;
+  line-height: 19.07px;
+  text-align: justify;
+  max-width: 431px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #050505;
+}
+
+.diagonal-bg {
+  background: linear-gradient(103deg, #d7d7d7 52%, #000 52%);
+}
+
+.about-radial-bg {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%),
+    #fff;
+}
+
+.contact-radial-bg {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(0, 0, 0, 0.16) 100%),
+    #fff;
+}
+
+.it-berries-bg {
+  background: linear-gradient(95deg, #1d1d1d 32%, #1d1d1d 91%);
+}
+
+.section-bar {
+  width: 170px;
+  height: 12px;
+  background: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-icon-box {
+  width: 61px;
+  height: 56px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.l-form-field {
+  position: relative;
+  padding-left: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+}
+
+.l-form-field::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #000;
+}
+
+.l-form-field::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 5px;
+  background: #000;
+}
+
+.l-form-field input,
+.l-form-field textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000;
+  padding: 8px 12px;
+}
+
+@media (min-width: 768px) {
+  .l-form-field input,
+  .l-form-field textarea {
+    font-size: 14px;
+  }
+}
+
+.l-form-field input::placeholder,
+.l-form-field textarea::placeholder {
+  color: #8b8b8b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
