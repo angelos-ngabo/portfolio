@@ -1280,16 +1280,18 @@ button {
   height: auto !important;
 }
 
-/* Third card centered only when a third card actually exists */
-.portfolio-grid:has(.portfolio-card:nth-child(3)) .portfolio-card:nth-child(3):last-child,
-.portfolio-grid:has(.project-card:nth-child(3)) .project-card:nth-child(3):last-child,
-.projects-grid:has(.portfolio-card:nth-child(3)) .portfolio-card:nth-child(3):last-child,
-.projects-grid:has(.project-card:nth-child(3)) .project-card:nth-child(3):last-child {
-  grid-column: 1 / -1;
-  max-width: 50%;
-  margin: 0 auto;
-  justify-self: center;
-  width: 100%;
+@media (min-width: 769px) {
+  /* Third card centered on desktop only */
+  .portfolio-grid:has(.portfolio-card:nth-child(3)) .portfolio-card:nth-child(3):last-child,
+  .portfolio-grid:has(.project-card:nth-child(3)) .project-card:nth-child(3):last-child,
+  .projects-grid:has(.portfolio-card:nth-child(3)) .portfolio-card:nth-child(3):last-child,
+  .projects-grid:has(.project-card:nth-child(3)) .project-card:nth-child(3):last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+    justify-self: center;
+    width: 100%;
+  }
 }
 
 .portfolio-card,
@@ -2041,12 +2043,13 @@ button {
     gap: 16px;
   }
 
-  .portfolio-grid .portfolio-card:nth-child(3),
-  .portfolio-grid .project-card:nth-child(3),
-  .projects-grid .portfolio-card:nth-child(3),
-  .projects-grid .project-card:nth-child(3) {
+  .portfolio-grid .portfolio-card,
+  .projects-grid .portfolio-card,
+  .portfolio-grid .project-card,
+  .projects-grid .project-card {
     grid-column: auto;
     max-width: 100%;
+    width: 100%;
     margin: 0;
     justify-self: stretch;
   }
