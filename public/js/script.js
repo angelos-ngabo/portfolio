@@ -19,12 +19,25 @@
   const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-contact-btn');
   const mobileMq = window.matchMedia('(max-width: 768px)');
 
+  const getTimeGreeting = () => {
+    const hour = new Date().getHours();
+
+    if (hour >= 4 && hour < 12) return 'Good morning, I am';
+    if (hour >= 12 && hour < 18) return 'Good afternoon, I am';
+    return 'Good evening, I am';
+  };
+
+  document.querySelectorAll('.greeting').forEach((el) => {
+    el.textContent = getTimeGreeting();
+  });
+
   const setMenuOpen = (open) => {
     if (!mobileMenu) return;
     mobileMenu.classList.toggle('open', open);
     mobileMenu.setAttribute('aria-hidden', String(!open));
     hamburger?.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open) header?.classList.remove('nav-hidden');
   };
 
   const closeMenu = () => setMenuOpen(false);
@@ -52,8 +65,52 @@
 
   mobileMq.addEventListener('change', closeMenu);
 
+  let lastScrollY = window.scrollY;
+  let scrollUpTimer = null;
+  const NAV_SCROLL_MIN = 80;
+  const NAV_SCROLL_DELTA = 4;
+  const NAV_SHOW_DELAY = 300;
+
+  const showHeader = () => {
+    header?.classList.remove('nav-hidden');
+  };
+
   const onScroll = () => {
-    header?.classList.toggle('scrolled-past-hero', window.scrollY > 80);
+    const scrollY = window.scrollY;
+    const menuOpen = mobileMenu?.classList.contains('open');
+
+    header?.classList.toggle('scrolled-past-hero', scrollY > NAV_SCROLL_MIN);
+
+    if (!header || menuOpen) {
+      clearTimeout(scrollUpTimer);
+      scrollUpTimer = null;
+      showHeader();
+      lastScrollY = scrollY;
+      return;
+    }
+
+    if (scrollY <= NAV_SCROLL_MIN) {
+      clearTimeout(scrollUpTimer);
+      scrollUpTimer = null;
+      showHeader();
+      lastScrollY = scrollY;
+      return;
+    }
+
+    if (scrollY > lastScrollY + NAV_SCROLL_DELTA) {
+      clearTimeout(scrollUpTimer);
+      scrollUpTimer = null;
+      header.classList.add('nav-hidden');
+    } else if (scrollY < lastScrollY - NAV_SCROLL_DELTA) {
+      if (!scrollUpTimer) {
+        scrollUpTimer = setTimeout(() => {
+          showHeader();
+          scrollUpTimer = null;
+        }, NAV_SHOW_DELAY);
+      }
+    }
+
+    lastScrollY = scrollY;
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });

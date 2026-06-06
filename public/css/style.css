@@ -205,7 +205,17 @@ button {
   z-index: 100;
   height: var(--nav-h);
   background-color: #1a1a1a;
-  transition: box-shadow 0.3s ease;
+  transform: translateY(0);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.35s ease,
+    background-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.site-header.nav-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
 }
 
 .site-header.scrolled-past-hero {
